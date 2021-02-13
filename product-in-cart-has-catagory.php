@@ -1,4 +1,4 @@
-?>
+<?php
 
 /**
  * My newly created function to determine if blocks should show.
