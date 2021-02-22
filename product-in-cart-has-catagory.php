@@ -7,19 +7,16 @@
  */
 function custom_has_product_category_id_in_cart( $category_id ) {
 
-	$has_category = false;
-
 	// Loop through cart items.
 	foreach ( WC()->cart->get_cart() as $cart_item ) {
 		// Check for product categories.
 
 		if ( has_term( $category_id, 'product_cat', $cart_item['product_id'] ) ) {
-			$has_category = true;
-			break;
+			return true;
 		}
 	}
 
-	return $has_category;
+	return false;
 }
 
 
